@@ -4,11 +4,6 @@ import multiprocessing
 from kafka import  KafkaProducer
 
 
-def sendStreamM(topicN, tContent):
-    producer = KafkaProducer(bootstrap_servers='172.20.0.2:9092')
-    producer.send(topicN, tContent)
-    producer.close()
-
 class Producer(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -20,10 +15,10 @@ class Producer(threading.Thread):
     def run(self):
         producer = KafkaProducer(bootstrap_servers='172.20.0.2:9092')
 
-        #while not self.stop_event.is_set():
-        #    producer.send('test', b"test")
-        #    producer.send('test', b"\xc2Hola, mundo!")
-        #    time.sleep(3)
+        while not self.stop_event.is_set():
+            producer.send('test', b"test")
+            producer.send('test', b"\xc2Hola, mundo!")
+            time.sleep(3)
 
         producer.close()
 
