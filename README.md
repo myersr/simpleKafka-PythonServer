@@ -66,7 +66,7 @@ python kafkaProducerService.py
 
 ## Authors
 
-* **Roy Myers** - *Initial work* - [rmyers19](https://github.optum.com/rmyers19)
+* **Roy Myers** - *Initial work* - [myersr](https://github.com/myersr)
 
 
 ## License
