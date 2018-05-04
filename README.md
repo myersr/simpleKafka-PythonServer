@@ -85,3 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Test if Zookeeper has registered a broker: `echo dump | nc localhost 2181 | grep brokers` and look for an ID   
 To run Spotify container `docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka-spotify --env ADVERTISED_PORT=9092 --name kafka-spotify spotify/kafka` instead of the supplied command as I don't have docker-machine.
+Please Reach-out
