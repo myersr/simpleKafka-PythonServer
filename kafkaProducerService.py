@@ -1,5 +1,4 @@
 import threading, logging, time
-import multiprocessing
 
 from kafka import  KafkaProducer
 
@@ -34,7 +33,7 @@ class Producer(threading.Thread):
         while not self.stop_event.is_set():
             #Send two messages of type binary to the 'test' Topic
             producer.send('test', b"test")
-            producer.send('test', b"\xc2Hola, mundo!")
+            producer.send('test', b"Hola, mundo!")
             #Sleep for 3 seconds
             time.sleep(3)
        
