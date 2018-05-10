@@ -8,7 +8,9 @@ This repository handles a couple Kafka use cases. In an incredibly simple overvi
  * a __Consumer__ grabs the message from __Kafka__ to process  
 
 One very loose metaphor for a kafka system could be subscribing to a magazine. The Company(Producer) prints the magazine. They have your address but don't know how to get to you.  
-They deliver a stack of magazines to UPS(Kafka). UPS has no knowledge/use of what is in that magazine, but they know how to get it to the reader's(Consumer) address. UPS is in charge of delivering, tracking, and keeping the magazine safe.  
+
+The company delivers a stack of magazines to UPS(Kafka). UPS has no knowledge/use of what is in that magazine, but they know how to get it to the reader's(Consumer) address. UPS is in charge of delivering, tracking, and keeping the magazine safe.   
+
 The reader(Consumer) has a mailbox with his address on the side therefore UPS drops off the magazine.
 
 There are a couple of things to note here. 
@@ -25,7 +27,7 @@ This repo provides a basis for 2 different __Producer__ scenarios.
 
 This repo provides a basis for 1 __Consumer__ scenario.  
  1. A python script to spawn a thread that runs for 20 seconds and opens a connection to listen on a topic. The thread prints all messages to stdout then closes the connection after the 20 seconds.  
-   * [kafkaConsumerService.py](kafkaConsumerService.py)  
+    * [kafkaConsumerService.py](kafkaConsumerService.py)  
 
 This is not a tutorial for using/configuring Kafka. To make things simple, I use the spotify/kafka image that has all the needed functionality inside one container. This also nullifies a lot of the benefits that Kafka can provide. To make it easy, I have included scripts to get the container(s) up and running. The scripts have comments and I implore you to read the commands and be very familiar with what you are running.  
 //Tutorial to come and be linked.
@@ -56,7 +58,7 @@ Order to run:
 
 You will end with a persistent container running Kafka and Zookeeper in the background, a container printing out to the terminal relaying messages to a Kafka topic.  
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you have to get a development env running. With python I Always suggest a virtual environment.  
 
