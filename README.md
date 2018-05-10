@@ -19,9 +19,9 @@ There are a couple of things to note here.
 
 This repo provides a basis for 2 different __Producer__ scenarios.  
  1. A running python Flask server that accepts a POST request and then opens a connection to Kafka. The server sends the POST body to kafka as JSON and closes the connection after the message is sent. 
-   * [server.py](server.py)
+    * [server.py](server.py)
  2. A python script that spawns a thread that opens a connection to Kafka and sends two messages every couple seconds for 17 seconds.  
-   * [kafkaProducerService.py](kafkaProducerService.py)
+    * [kafkaProducerService.py](kafkaProducerService.py)
 
 This repo provides a basis for 1 __Consumer__ scenario.  
  1. A python script to spawn a thread that runs for 20 seconds and opens a connection to listen on a topic. The thread prints all messages to stdout then closes the connection after the 20 seconds.  
